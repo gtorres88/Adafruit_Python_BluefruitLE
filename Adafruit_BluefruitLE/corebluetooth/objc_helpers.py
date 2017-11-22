@@ -39,16 +39,13 @@ def cbuuid_to_uuid(cbuuid):
     if len(uuidString) == 4:
         # Short 16-bit UUID
         uuidString = '0000' + uuidString + '-0000-1000-8000-00805F9B34FB'
-        print(uuidString)
         return uuid.UUID(uuidString)
     elif len(uuidString) == 8:
         # Short 32-bit UUID
         uuidString = uuidString + '-0000-1000-8000-00805F9B34FB'
-        print(uuidString)
         return uuid.UUID(uuidString)
     else:
         # Full 128-bit UUID
-        print(uuidString)
         return uuid.UUID(uuidString)
 
 
