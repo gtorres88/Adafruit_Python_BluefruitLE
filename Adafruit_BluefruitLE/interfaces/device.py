@@ -29,7 +29,7 @@ class Device(object):
     __metaclass__ = abc.ABCMeta
 
     @abc.abstractmethod
-    def connect(self, timeout_sec):
+    def connect(self, timeout_sec, state_change_handler):
         """Connect to the BLE device."""
         raise NotImplementedError
 
